@@ -1,0 +1,13 @@
+import java.util.Objects;
+
+class SingletonInheritanceCheck{
+    public static void Check(Singleton x,Singleton y) {
+        if (Objects.equals(x, y)) {
+            System.out.println("Singleton Inheritance check comple and authenticated");
+
+        } else {
+            System.out.println("this is not a singleton class");
+        } 
+    }
+}
+ 

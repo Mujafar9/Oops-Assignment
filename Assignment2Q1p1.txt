@@ -1,0 +1,27 @@
+class Singleton
+{
+    private static Singleton sub;
+    public String str;
+    private Singleton()
+    {
+        str = "THIS CLASS IS SINGLETON";
+    }
+    public static Singleton getInstance()
+    {
+        if(sub == null)
+        {
+            sub = new Singleton();
+
+        }
+        return sub;
+    }
+    public static void main(String args[])
+    {
+        Singleton obj = Singleton.getInstance();
+        Singleton obj2 = Singleton.getInstance();
+        System.out.println(obj.str);
+        System.out.println(obj2.str);
+        SingletonInheritanceCheck.Check(obj,obj2);
+
+    }
+}
